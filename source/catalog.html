@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Academy: Мишка</title>
+</head>
+<body>
+<header class="page-header">
+  <div class="page-header__wrapper page-wrapper">
+    <a class="page-header__logo" href="index.html" aria-label="Перейти на главную страницу.">
+      <img src="./img/logos/main-logo-mobile.svg" alt="Логотип Мишки." width="86" height="35">
+    </a>
+    <nav class="page-header__navigation main-navigation">
+      <button class="main-navigation__toggle" type="button" aria-label="Открыть / Закрыть меню."></button>
+      <ul class="main-navigation__list main-navigation__list--first">
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#" aria-label="Обновить страницу.">Каталог товаров</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="form.html" aria-label="Перейти на страницу формы.">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="main-navigation__list main-navigation__second">
+        <li class="main-navigation__item">
+          <a class="main-navigation__link main-navigation__link--search" href="#" aria-label="Поиск по сайту.">Поиск по сайту</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link main-navigation__link--cart" href="#" aria-label="Открыть корзину.">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="page-main">
+  <section class="products page-wrapper">
+    <ul class="products__list">
+      <li class="products__list-item product">
+        <a class="product__link" href="#">
+          <img class="product__image" src="#" alt="Зайчик-попрыгайчик." width="260" height="195">
+        </a>
+        <a class="product__title" href="#">Зайчик-попрыгайчик</a>
+        <span class="product__description">Рост 30 см, вес 200 г</span>
+        <div class="product__container">
+          <span class="product__price">1 200 руб.</span>
+          <button class="product__button" type="button" aria-label="Купить товар."></button>
+        </div>
+      </li>
+      <li class="products__list-item product">
+        <a class="product__link" href="#">
+          <img class="product__image" src="#" alt="Корзинка для белья." width="260" height="195">
+        </a>
+        <a class="product__title" href="#">Корзинка для белья</a>
+        <span class="product__description">Диаметр 15 см, высота 10 см</span>
+        <div class="product__container">
+          <span class="product__price">690 руб.</span>
+          <button class="product__button" type="button" aria-label="Купить товар."></button>
+        </div>
+      </li>
+      <li class="products__list-item product">
+        <a class="product__link" href="#">
+          <img class="product__image" src="#" alt="Большая корзинка для игрушек." width="260" height="195">
+        </a>
+        <a class="product__title" href="#">Большая корзинка для игрушек</a>
+        <span class="product__description">Диаметр 30 см, высота 30 см</span>
+        <div class="product__container">
+          <span class="product__price">1 500 руб.</span>
+          <button class="product__button" type="button" aria-label="Купить товар."></button>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="video page-wrapper">
+    <h2 class="video__title">Процесс производства</h2>
+    <a class="video__link" href="#" aria-label="Открыть видео.">
+        <img class="video__image" src="#" alt="Вязаная корзинка." width="260" height="150">
+    </a>
+    <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+    <button class="video__button" type="button">СДелать заказ</button>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__wrapper page-wrapper">
+    <a class="page-footer__logo" href="index.html" aria-label="Перейти на главную страницу.">
+    </a>
+    <ul class="page-footer__socials socials">
+      <li class="socials__item">
+        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу во вконтакте."></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу на ютубе."></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу в телеграм."></a>
+      </li>
+    </ul>
+  </div>
+  <a class="page-footer__developer" href="#" aria-label="Перейти на сайт htmlacademy.">
+    <span class="page-footer__developer-text">Разработано</span>
+  </a>
+</footer>
+</body>
+</html>
