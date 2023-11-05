@@ -1,5 +1,9 @@
 // Начните писать стили здесь
 
 @import "./variables.scss";
+@import "./mixins.scss";
 @import "./fonts.scss";
 @import "./global.scss";
+@import "./blocks/page-wrapper.scss";
+@import "./blocks/title.scss";
+@import "./blocks/intro.scss";

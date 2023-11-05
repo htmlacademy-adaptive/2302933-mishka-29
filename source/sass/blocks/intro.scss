@@ -1,0 +1,120 @@
+//БЛОК ИНТРО
+
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding-top: 73px;
+  background-image: url("../img/intro/background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+
+  @include tablet {
+    padding: 155px 50px 12px;
+    gap: 372px;
+    background-image: url("../img/intro/background-tablet.jpg");
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../img/intro/zigzag.svg");
+      background-size: auto 24px;
+      height: 24px;
+    }
+  }
+
+  @include desktop {
+    padding: 156px 50px 17px;
+    background-image: url("../img/intro/background-desktop.jpg");
+    gap: 355px;
+
+    &::after {
+      height: 34px;
+      background-size: auto 34px;
+    }
+  }
+}
+
+.intro__title {
+  padding: 0 30px 0;
+
+  @include desktop {
+    padding: 0 150px 0;
+  }
+}
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.intro__link {
+  position: relative;
+  padding: 24px 160px 31px 30px;
+  min-height: 103px;
+  color: $color-white;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+
+  @include tablet {
+    padding: 25px 167px 34px 37px;
+    font-size: 20px;
+    line-height: 30px;
+    min-height: 119px;
+  }
+
+  @include desktop {
+    padding-right: 350px;
+  }
+
+  &::before {
+    content: "";
+    background-color: rgba($color-dark-main, 0.5);
+    position: absolute;
+  }
+
+  &--interior {
+    background-color: $color-main;
+
+    &::before {
+      top: 23px;
+      right: 36px;
+      width: 40px;
+      height: 62px;
+      mask: url("../img/icons/lamp.svg");
+
+      @include tablet {
+        top: 30px;
+        right: 36px;
+      }
+    }
+  }
+
+  &--toy {
+    background-color: $color-additional-main;
+
+    &::before {
+      top: 21px;
+      right: 27px;
+      width: 60px;
+      height: 60px;
+      mask: url("../img/icons/toy.svg");
+
+      @include tablet {
+        top: 31px;
+        right: 33px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+//ЗАГОЛОВОК
+
+.title {
+  margin: 0;
+  color: $color-black;
+  font-weight: 700;
+  line-height: 30px;
+
+  @include tablet {
+    line-height: 50px;
+  }
+
+  &--main {
+    text-align: center;
+    font-size: 27px;
+
+    @include tablet {
+      font-size: 43px;
+    }
+  }
+
+  &--section {
+    font-size: 25px;
+
+    @include tablet {
+      font-size: 43px;
+    }
+  }
+}
