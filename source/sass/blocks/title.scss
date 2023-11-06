@@ -10,12 +10,20 @@
     line-height: 50px;
   }
 
+  @include desktop {
+    line-height: 57px;
+  }
+
   &--main {
     text-align: center;
     font-size: 27px;
 
     @include tablet {
       font-size: 43px;
+    }
+
+    @include desktop {
+      font-size: 53px;
     }
   }
 
@@ -24,6 +32,10 @@
 
     @include tablet {
       font-size: 43px;
+    }
+
+    @include desktop {
+      font-size: 53px;
     }
   }
 }

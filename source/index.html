@@ -42,13 +42,13 @@
       <a class="intro__link intro__link--toy" href="#">Детские игрушки</a>
     </div>
   </section>
-  <section class="week-product">
+  <section class="week-product page-wrapper">
     <div class="week-product__header">
-      <h2 class="week-product__title">Вязаные корзинки</h2>
+      <h2 class="week-product__title title title--section">Вязаные корзинки</h2>
       <span class="week-product__subtitle">ТОВАР НЕДЕЛИ</span>
     </div>
     <div class="week-product__content">
-      <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+      <p class="week-product__description">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках и трёх размерах.</p>
       <dl class="week-product__details">
         <div class="week-product__details-line">
           <dt>Цвет:</dt>
@@ -64,10 +64,14 @@
         </div>
       </dl>
     </div>
-    <img class="week-product__image" src="#" alt="Вязаные корзинки" width="260" height="315">
+    <picture class="week-product__image">
+      <source media="(min-width: 1150px)" srcset="./img/week-product/triple-set-desktop.jpg 1x, ./img/week-product/triple-set-desktop@2x.jpg 2x" width="525" height="636">
+      <source media="(min-width: 768px)" srcset="./img/week-product/triple-set-tablet.jpg 1x, ./img/week-product/triple-set-tablet@2x.jpg 2x" width="334" height="404">
+      <img src="./img/week-product/triple-set-mobile.jpg" srcset="./img/week-product/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" width="260" height="315">
+    </picture>
     <div class="week-product__container">
       <span class="week-product__price">Цена: 990 руб.</span>
-      <button class="week-product__button" type="button">ЗАКАЗАТЬ</button>
+      <button class="week-product__button button button--main" type="button">ЗАКАЗАТЬ</button>
     </div>
   </section>
   <section class="advantages page-wrapper">

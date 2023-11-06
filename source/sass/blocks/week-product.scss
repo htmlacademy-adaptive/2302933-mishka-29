@@ -1,0 +1,163 @@
+//БЛОК С ТОВАРОМ НЕДЕЛИ
+
+.week-product {
+  display: flex;
+  flex-direction: column;
+  padding: 31px 30px 36px;
+
+  @include tablet {
+    padding: 40px 50px 36px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    gap: 37px 42px;
+  }
+
+  @include desktop {
+    padding: 44px 50px 73px 225px;
+    position: relative;
+    grid-template-rows: min-content min-content;
+    column-gap: 58px;
+  }
+}
+
+.week-product__header {
+  margin-bottom: 17px;
+
+  @include tablet {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1/-1;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 104px;
+    left: -143px;
+    flex-direction: row-reverse;
+    gap: 43px;
+  }
+}
+
+.week-product__subtitle {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $color-main;
+
+  @include tablet {
+    line-height: 17px;
+    max-width: 100px;
+    text-align: center;
+  }
+}
+
+.week-product__content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  @include tablet {
+    gap: 38px;
+  }
+
+  @include desktop {
+    gap: 52px;
+    padding-top: 153px;
+  }
+}
+
+.week-product__description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 24px;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.week-product__details {
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    margin: 0;
+    max-width: 300px;
+  }
+}
+
+.week-product__details-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0 10px;
+  font-size: 15px;
+  line-height: 20px;
+  border-bottom: 1px solid #ececec;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+
+  @include desktop {
+    padding: 8px 0 12px;
+  }
+
+  dt {
+    min-width: 97px;
+  }
+
+  dd {
+    min-width: 162px;
+    margin: 0;
+  }
+}
+
+.week-product__image {
+  align-self: center;
+  margin-bottom: 25px;
+
+  img {
+    display: block;
+    max-width: none;
+  }
+
+  @include tablet {
+    padding-top: 11px;
+    margin: 0;
+    grid-row: 2/4;
+    grid-column: 2/3;
+  }
+
+  @include desktop {
+    padding: 0;
+    grid-row: 1/-1;
+  }
+}
+
+.week-product__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include tablet {
+    margin-top: auto;
+    gap: 32px;
+    padding-top: 23px;
+  }
+}
+
+.week-product__price {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
