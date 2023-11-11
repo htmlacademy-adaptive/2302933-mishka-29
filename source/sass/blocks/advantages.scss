@@ -1,0 +1,80 @@
+//БЛОК ПРЕИМУЩСТВ
+
+.advantages {
+  padding: 37px 30px 28px;
+  background-image: url("../img/advantages/zigzag.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+
+  @include tablet {
+    padding: 72px 50px 53px;
+  }
+
+  @include desktop {
+    background-size: 1050px 23px;
+    padding: 91px 225px 60px;
+  }
+}
+
+.advantages__title {
+  margin-bottom: 28px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+
+.advantages__list {
+  @include reset-list;
+  display: grid;
+  gap: 30px;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 80px;
+  }
+}
+
+.advantages__item {
+  padding-top: 53px;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  &--material {
+    background-image: url("../img/icons/flower.svg");
+  }
+
+  &--price {
+    background-image: url("../img/icons/money.svg");
+  }
+
+  &--likes {
+    background-image: url("../img/icons/heart.svg");
+  }
+
+  &--hand-tied {
+    background-image: url("../img/icons/fabric.svg");
+  }
+
+  &--support {
+    background-image: url("../img/icons/rocket.svg");
+  }
+
+  &--package {
+    background-image: url("../img/icons/gift.svg");
+  }
+}
+
+.advantages__description {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $color-black;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
