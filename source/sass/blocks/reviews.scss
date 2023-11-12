@@ -1,0 +1,84 @@
+//БЛОК ОТЗЫВОВ
+
+.reviews {
+  padding: 30px 30px 45px;
+
+  @include tablet {
+    position: relative;
+    padding: 115px 50px 115px;
+    background-image: url("../img/reviews/fabric.jpg");
+    background-repeat: no-repeat;
+    background-position: top 50px left;
+  }
+
+  @include desktop {
+    padding: 108px 50px 163px 225px;
+    background-position: top 30px left 50px;
+  }
+}
+
+.reviews__title {
+  margin-bottom: 14px;
+
+  @include tablet {
+    margin-bottom: 38px;
+  }
+
+  @include desktop {
+    margin-bottom: 35px;
+  }
+}
+
+.reviews__slider {
+  margin-bottom: 38px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.reviews__text {
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0 0 33px;
+
+  @include tablet {
+    font-size: 17px;
+    margin-bottom: 61px;
+  }
+
+  @include desktop {
+    margin-bottom: 44px;
+  }
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.reviews__author {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-black;
+
+  @include tablet {
+    font-size: 18px;
+  }
+}
+
+.reviews__username {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.reviews__link {
+  @include tablet {
+    position: absolute;
+    top: 111px;
+    right: 50px;
+    width: 175px;
+  }
+}

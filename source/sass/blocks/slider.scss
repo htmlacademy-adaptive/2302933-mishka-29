@@ -1,0 +1,63 @@
+//СЛАЙДЕР
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.slider__body {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.slider__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include tablet {
+    width: 150px;
+    position: absolute;
+    bottom: 120px;
+    right: 50px;
+  }
+
+  @include desktop {
+    bottom: 170px;
+  }
+}
+
+.slider__button {
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #ececec;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 26px;
+    background-color: $color-black;
+    mask: url("../img/icons/arrow-left.svg");
+  }
+
+  &--next {
+    transform: rotate(180deg);
+    margin-left: -1px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  @include tablet {
+    border: none;
+  }
+}
