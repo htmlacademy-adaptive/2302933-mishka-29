@@ -1,0 +1,16 @@
+//БЛОК СОЦИАЛЬНЫХ СЕТЕЙ
+
+.socials {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.socials__link {
+  display: block;
+
+  svg {
+    fill: $color-dark-grey;
+  }
+}
