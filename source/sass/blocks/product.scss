@@ -1,0 +1,96 @@
+//КАРТОЧКА ТОВАРА
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include tablet {
+    grid-template-columns: 334px 1fr;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.product__image {
+  display: block;
+}
+
+.product__content {
+  display: flex;
+  flex-direction: column;
+  padding: 23px 27px 25px;
+  border: 1px solid $color-additional-grey2;
+
+  @include tablet {
+    padding: 26px 33px 25px;
+  }
+
+  @include desktop {
+    flex-grow: 1;
+    padding: 26px 27px 24px;
+  }
+}
+
+.product__title {
+  color: $color-black;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  max-width: 200px;
+
+  @include tablet {
+    max-width: none;
+    font-size: 20px;
+  }
+}
+
+.product__description {
+  font-size: 13px;
+  line-height: 30px;
+  margin-bottom: 18px;
+
+  @include tablet {
+    font-size: 15px;
+    margin-bottom: auto;
+  }
+}
+
+.product__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid $color-additional-grey2;
+  padding-top: 22px;
+}
+
+.product__price {
+  color: $color-black;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+
+  @include tablet {
+    font-size: 17px;
+  }
+}
+
+.product__button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 19px;
+    mask: url("../img/icons/cart.svg");
+    background-color: rgba($color-black, 0.2);
+  }
+}
