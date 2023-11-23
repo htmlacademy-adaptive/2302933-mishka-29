@@ -91,12 +91,20 @@
     </ul>
   </section>
   <section class="video page-wrapper">
-    <h2 class="video__title">Процесс производства</h2>
+    <div class="video__top">
+      <h2 class="video__title">Процесс производства</h2>
+    </div>
     <a class="video__link" href="#" aria-label="Открыть видео.">
-        <img class="video__image" src="#" alt="Вязаная корзинка." width="260" height="150">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="./img/video/video-desktop.jpg 1x, ./img/video/video-desktop@2x.jpg 2x" width="682" height="455">
+        <source media="(min-width: 768px)" srcset="./img/video/video-tablet.jpg 1x, ./img/video/video-tablet@2x.jpg 2x" width="668" height="455">
+        <img class="video__image" src="./img/video/video-mobile.jpg" srcset="./img/video/video-mobile@2x.jpg 2x" alt="Вязаная корзинка." width="260" height="150">
+      </picture>
     </a>
-    <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-    <button class="video__button" type="button">СДелать заказ</button>
+    <div class="video__bottom">
+      <p class="video__description">По&nbsp;просьбам&nbsp;наших&nbsp;любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <button class="video__button button button--main" type="button">СДелать заказ</button>
+    </div>
   </section>
 </main>
 <footer class="page-footer">
