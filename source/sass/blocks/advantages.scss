@@ -43,10 +43,18 @@
 
   &--material {
     background-image: url("../img/icons/flower.svg");
+
+    @include tablet {
+      order: -5;
+    }
   }
 
   &--price {
     background-image: url("../img/icons/money.svg");
+
+    @include tablet {
+      order: -4;
+    }
   }
 
   &--likes {
@@ -55,10 +63,18 @@
 
   &--hand-tied {
     background-image: url("../img/icons/fabric.svg");
+
+    @include tablet {
+      order: -5;
+    }
   }
 
   &--support {
     background-image: url("../img/icons/rocket.svg");
+
+    @include tablet {
+      order: -4;
+    }
   }
 
   &--package {

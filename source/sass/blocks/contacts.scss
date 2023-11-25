@@ -8,8 +8,10 @@
 
   @include desktop {
     position: relative;
-    display: flex;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr 527px;
+    grid-template-rows: min-content min-content;
+    gap: 0 60px;
     padding: 94px 50px 105px 113px;
     background-size: 1052px 23px;
   }
@@ -102,7 +104,8 @@
   }
 
   @include desktop {
-    width: 527px;
+    grid-row: 1/-1;
+    width: 100%;
   }
 }
 
@@ -116,10 +119,11 @@
   }
 
   @include desktop {
-    position: absolute;
-    bottom: 105px;
-    left: 225px;
-    padding: 0;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-content: flex-start;
+    align-self: flex-end;
+    padding: 0 0 0 112px;
   }
 }
 

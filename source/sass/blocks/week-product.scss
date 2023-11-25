@@ -14,9 +14,9 @@
   }
 
   @include desktop {
-    padding: 44px 50px 73px 225px;
+    padding: 44px 50px 73px 85px;
     position: relative;
-    grid-template-rows: min-content min-content;
+    grid-template-columns: repeat(2, min-content);
     column-gap: 58px;
   }
 }
@@ -33,10 +33,11 @@
   }
 
   @include desktop {
-    position: absolute;
-    top: 104px;
-    left: -143px;
+    z-index: 1;
+    grid-column: 1/-1;
+    grid-row: 1/2;
     flex-direction: row-reverse;
+    justify-content: flex-end;
     gap: 43px;
   }
 }
@@ -64,8 +65,8 @@
   }
 
   @include desktop {
+    padding-left: 150px;
     gap: 52px;
-    padding-top: 153px;
   }
 }
 
@@ -136,6 +137,7 @@
   @include desktop {
     padding: 0;
     grid-row: 1/-1;
+    grid-column: 2/3;
   }
 }
 
@@ -148,6 +150,10 @@
     margin-top: auto;
     gap: 32px;
     padding-top: 23px;
+  }
+
+  @include desktop {
+    padding-left: 150px;
   }
 }
 

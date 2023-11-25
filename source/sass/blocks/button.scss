@@ -15,5 +15,16 @@
     line-height: 20px;
     border: 2px solid $color-text;
     background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $color-text;
+      color: $color-white;
+    }
+
+    &:active {
+      background-color: $color-text;
+      color: rgba($color-white, 0.3);
+    }
   }
 }
