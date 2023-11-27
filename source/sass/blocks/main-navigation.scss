@@ -1,0 +1,98 @@
+//ОСНОВНАЯ НАВИГАЦИЯ
+
+.main-navigation__list {
+  @include reset-list();
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    background-color: $color-white;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  &--first {
+    top: 79px;
+  }
+
+  &--second {
+    top: 158px;
+  }
+}
+
+.main-navigation__toggle {
+  display: block;
+  padding: 0;
+  border: none;
+  width: 21px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+
+  &--active {
+    .main-navigation__toggle-line--first {
+      top: 9px;
+      transform: rotate(135deg);
+    }
+
+    .main-navigation__toggle-line--second {
+      opacity: 0;
+      right: -60px;
+    }
+
+    .main-navigation__toggle-line--third {
+      top: 9px;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &:hover .main-navigation__toggle-line {
+    background-color: $color-additional-main2;
+  }
+
+  &:active .main-navigation__toggle-line {
+    background-color: rgba($color-additional-main2, 0.3);
+  }
+}
+
+.main-navigation__toggle-line {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: $color-light-black;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out, background-color 0.3s ease;
+
+  &--first {
+    top: 4px;
+  }
+
+  &--second {
+    top: 10px;
+  }
+
+  &--third {
+    top: 16px;
+  }
+}
+
+.main-navigation__link {
+  padding: 26px 0 27px;
+  border-top: 1px solid $color-additional-grey2;
+  text-align: center;
+  display: block;
+  color: $color-black;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}

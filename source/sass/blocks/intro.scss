@@ -66,6 +66,7 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 
   @include tablet {
     padding: 25px 167px 34px 37px;
@@ -82,6 +83,7 @@
     content: "";
     background-color: rgba($color-dark-main, 0.5);
     position: absolute;
+    transition: background-color 0.3s ease;
   }
 
   &--interior {
@@ -115,6 +117,24 @@
         top: 31px;
         right: 33px;
       }
+    }
+  }
+
+  &:hover {
+    background-color: $color-additional-main3;
+    transform: translateY(-5px);
+
+    &::before {
+      background-color: rgba($color-dark-main, 0.7);
+    }
+  }
+
+  &:active {
+    background-color: $color-additional-main3;
+    transform: translateY(-5px);
+
+    &::before {
+      background-color: rgba($color-dark-main, 0.3);
     }
   }
 }

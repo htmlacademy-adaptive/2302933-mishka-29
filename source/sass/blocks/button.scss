@@ -27,4 +27,13 @@
       color: rgba($color-white, 0.3);
     }
   }
+
+  &--extra {
+    color: $color-white;
+    font-size: 17px;
+    line-height: 16px;
+    padding: 18px 0;
+    border: none;
+    background-color: $color-main;
+  }
 }

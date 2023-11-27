@@ -23,6 +23,7 @@
   flex-direction: column;
   padding: 23px 27px 25px;
   border: 1px solid $color-additional-grey2;
+  transition: box-shadow 0.3s ease;
 
   @include tablet {
     padding: 26px 33px 25px;
@@ -31,6 +32,10 @@
   @include desktop {
     flex-grow: 1;
     padding: 26px 27px 24px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
   }
 }
 
@@ -92,5 +97,18 @@
     height: 19px;
     mask: url("../img/icons/cart.svg");
     background-color: rgba($color-black, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $color-main;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba($color-main, 0.3);
+    }
   }
 }

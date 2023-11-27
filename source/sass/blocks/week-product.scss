@@ -22,7 +22,7 @@
 }
 
 .week-product__header {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 
   @include tablet {
     margin: 0;
@@ -33,6 +33,7 @@
   }
 
   @include desktop {
+    padding-top: 60px;
     z-index: 1;
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -40,6 +41,10 @@
     justify-content: flex-end;
     gap: 43px;
   }
+}
+
+.week-product__title {
+  margin-bottom: 3px;
 }
 
 .week-product__subtitle {
@@ -58,7 +63,8 @@
 .week-product__content {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 19px;
+  margin-bottom: 30px;
 
   @include tablet {
     gap: 38px;
@@ -82,7 +88,7 @@
 }
 
 .week-product__details {
-  margin: 0 0 28px;
+  margin: 0;
   display: flex;
   flex-direction: column;
 
@@ -120,7 +126,7 @@
 
 .week-product__image {
   align-self: center;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 
   img {
     display: block;

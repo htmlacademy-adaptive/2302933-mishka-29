@@ -12,5 +12,18 @@
 
   svg {
     fill: $color-dark-grey;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-additional-main2;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba($color-additional-main2, 0.3);
+    }
   }
 }

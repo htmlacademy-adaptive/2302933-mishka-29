@@ -50,7 +50,7 @@
           <span class="product__description">Рост 30 см, вес 200 г</span>
           <div class="product__container">
             <span class="product__price">1 200 руб.</span>
-            <button class="product__button" type="button" aria-label="Купить товар."></button>
+            <button class="product__button modalOpen" type="button" aria-label="Купить товар."></button>
           </div>
         </div>
       </li>
@@ -67,7 +67,7 @@
           <span class="product__description">Диаметр 15 см, высота 10 см</span>
           <div class="product__container">
             <span class="product__price">690 руб.</span>
-            <button class="product__button" type="button" aria-label="Купить товар."></button>
+            <button class="product__button modalOpen" type="button" aria-label="Купить товар."></button>
           </div>
         </div>
       </li>
@@ -84,7 +84,7 @@
           <span class="product__description">Диаметр 30 см, высота 30 см</span>
           <div class="product__container">
             <span class="product__price">1 500 руб.</span>
-            <button class="product__button" type="button" aria-label="Купить товар."></button>
+            <button class="product__button modalOpen" type="button" aria-label="Купить товар."></button>
           </div>
         </div>
       </li>
@@ -137,7 +137,7 @@
         </a>
       </li>
     </ul>
-    <a class="page-footer__developer" href="#" aria-label="Перейти на сайт htmlacademy.">
+    <a class="page-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт htmlacademy.">
       <span class="page-footer__developer-text">Разработано</span>
       <svg width="27" height="33" aria-hidden="true" focusable="false">
         <use href="./img/sprite.svg#logo-htmlacademy"></use>
@@ -145,5 +145,30 @@
     </a>
   </div>
 </footer>
+<div class="modal modal--closed">
+  <div class="modal__content">
+    <p class="modal__title">Добавить в&nbsp;корзину</p>
+    <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="modal__container">
+        <legend class="modal__text">Выберите размер:</legend>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="small" checked>
+          <span class="field__mark field__mark--modal">S</span>
+        </label>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="medium">
+          <span class="field__mark field__mark--modal">M</span>
+        </label>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="large">
+          <span class="field__mark field__mark--modal">L</span>
+        </label>
+      </fieldset>
+      <button class="modal__button button button--extra" type="submit">Добавить</button>
+    </form>
+  </div>
+</div>
+<script src="./js/main-navigation.js"></script>
+<script src="./js/modal.js"></script>
 </body>
 </html>

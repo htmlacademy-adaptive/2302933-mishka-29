@@ -8,14 +8,18 @@
   <title>HTML Academy: Мишка</title>
 </head>
 <body>
-<header class="page-header">
+<header class="page-header page-header--nojs">
   <div class="page-header__wrapper page-wrapper">
     <a class="page-header__logo" href="#" aria-label="Обновить страницу.">
       <img src="./img/logos/main-logo-mobile.svg" alt="Логотип Мишки." width="86" height="35">
     </a>
     <nav class="page-header__navigation main-navigation">
-      <button class="main-navigation__toggle" type="button" aria-label="Открыть / Закрыть меню."></button>
-      <ul class="main-navigation__list main-navigation__list--first">
+      <button class="main-navigation__toggle main-navigation__toggle--default" type="button" aria-label="Открыть / Закрыть меню.">
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--first"></span>
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--second"></span>
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--third"></span>
+      </button>
+      <ul class="main-navigation__list main-navigation__list--first main-navigation__list--closed">
         <li class="main-navigation__item">
           <a class="main-navigation__link" href="catalog.html" aria-label="Перейти на страницу каталога.">Каталог товаров</a>
         </li>
@@ -23,7 +27,7 @@
           <a class="main-navigation__link" href="form.html" aria-label="Перейти на страницу формы.">Вязание на заказ</a>
         </li>
       </ul>
-      <ul class="main-navigation__list main-navigation__second">
+      <ul class="main-navigation__list main-navigation__second main-navigation__list--closed">
         <li class="main-navigation__item">
           <a class="main-navigation__link main-navigation__link--search" href="#" aria-label="Поиск по сайту.">Поиск по сайту</a>
         </li>
@@ -71,14 +75,14 @@
     </picture>
     <div class="week-product__container">
       <span class="week-product__price">Цена: 990 руб.</span>
-      <button class="week-product__button button button--main" type="button">ЗАКАЗАТЬ</button>
+      <button class="week-product__button button button--main modalOpen" type="button">ЗАКАЗАТЬ</button>
     </div>
   </section>
   <section class="advantages page-wrapper">
     <h2 class="advantages__title title title--section">Коротко о нас:</h2>
     <ul class="advantages__list">
       <li class="advantages__item advantages__item--material">
-        <p class="advantages__description">Экологически чистые материалы</p>
+        <p class="advantages__description">Экологически чистые&nbsp;материалы</p>
       </li>
       <li class="advantages__item advantages__item--price">
         <p class="advantages__description">Скандинавский стиль по&nbsp;российской цене</p>
@@ -178,7 +182,7 @@
         </a>
       </li>
     </ul>
-    <a class="page-footer__developer" href="#" aria-label="Перейти на сайт htmlacademy.">
+    <a class="page-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт htmlacademy.">
       <span class="page-footer__developer-text">Разработано</span>
       <svg width="27" height="33" aria-hidden="true" focusable="false">
         <use href="./img/sprite.svg#logo-htmlacademy"></use>
@@ -186,5 +190,31 @@
     </a>
   </div>
 </footer>
+<div class="modal modal--closed">
+  <div class="modal__content">
+    <p class="modal__title">Добавить в&nbsp;корзину</p>
+    <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="modal__container">
+        <legend class="modal__text">Выберите размер:</legend>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="small" checked>
+          <span class="field__mark field__mark--modal">S</span>
+        </label>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="medium">
+          <span class="field__mark field__mark--modal">M</span>
+        </label>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="large">
+          <span class="field__mark field__mark--modal">L</span>
+        </label>
+      </fieldset>
+      <button class="modal__button button button--extra" type="submit">Добавить</button>
+    </form>
+  </div>
+</div>
+<script src="./js/main-navigation.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/slider.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+//ШАПКА САЙТА
+
+.page-header__wrapper {
+  border-top: 1px solid $color-additional-grey2;
+  padding: 19px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.page-header__logo {
+  margin: 0 auto;
+}
