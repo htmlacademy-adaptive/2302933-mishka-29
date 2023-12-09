@@ -95,4 +95,13 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgba($color-black, 0.6);
+  }
+
+  &:active {
+    color: rgba($color-black, 0.3);
+  }
 }

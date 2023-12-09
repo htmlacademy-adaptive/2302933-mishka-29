@@ -2,20 +2,36 @@
 
 .intro {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 120px;
-  padding-top: 73px;
-  background-image: url("../img/intro/background-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% auto;
+
+  &--index {
+    background-image: url("../img/intro/background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: $color-additional-grey4;
+
+    @include tablet {
+      background-image: url("../img/intro/background-tablet.jpg");
+    }
+
+    @include desktop {
+      background-image: url("../img/intro/background-desktop.jpg");
+    }
+  }
+
+  &--main {
+    background-color: $color-grey;
+    padding: 74px 30px;
+
+    @include tablet {
+      padding: 60px 50px 87px;
+    }
+
+    @include desktop {
+      padding: 60px 50px 113px;
+    }
+  }
 
   @include tablet {
-    padding: 155px 50px 12px;
-    gap: 372px;
-    background-image: url("../img/intro/background-tablet.jpg");
-
     &::after {
       content: "";
       position: absolute;
@@ -29,13 +45,28 @@
   }
 
   @include desktop {
-    padding: 156px 50px 17px;
-    background-image: url("../img/intro/background-desktop.jpg");
-    gap: 355px;
-
     &::after {
       height: 34px;
       background-size: auto 34px;
+    }
+  }
+}
+
+.intro__wrapper {
+  &--index {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    padding-top: 73px;
+
+    @include tablet {
+      padding: 155px 50px 12px;
+      gap: 372px;
+    }
+
+    @include desktop {
+      padding: 156px 50px 17px;
+      gap: 355px;
     }
   }
 }
