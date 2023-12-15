@@ -12,6 +12,10 @@
     background-image: url("../img/reviews/fabric.jpg");
     background-repeat: no-repeat;
     background-position: bottom 67px left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/reviews/fabric@2x.jpg");
+    }
   }
 
   @include desktop {

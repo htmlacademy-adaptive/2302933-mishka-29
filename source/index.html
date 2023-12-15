@@ -12,7 +12,11 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="./fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
 <body>
@@ -42,7 +46,7 @@
           <li class="main-navigation__item">
             <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу c новыми поступлениями.">Новые поступления</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--additional">
             <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу распродажи.">Распродажа</a>
           </li>
         </ul>
@@ -100,6 +104,9 @@
       </dl>
     </div>
     <picture class="week-product__image">
+      <source type="image/webp" media="(min-width: 1150px)" srcset="./img/week-product/triple-set-desktop.webp 1x, ./img/week-product/triple-set-desktop@2x.webp 2x" width="525" height="636">
+      <source type="image/webp" media="(min-width: 768px)" srcset="./img/week-product/triple-set-tablet.webp 1x, ./img/week-product/triple-set-tablet@2x.webp 2x" width="334" height="404">
+      <source type="image/webp" srcset="./img/week-product/triple-set-mobile.webp 1x, ./img/week-product/triple-set-mobile@2x.webp 2x" width="260" height="315">
       <source media="(min-width: 1150px)" srcset="./img/week-product/triple-set-desktop.jpg 1x, ./img/week-product/triple-set-desktop@2x.jpg 2x" width="525" height="636">
       <source media="(min-width: 768px)" srcset="./img/week-product/triple-set-tablet.jpg 1x, ./img/week-product/triple-set-tablet@2x.jpg 2x" width="334" height="404">
       <img src="./img/week-product/triple-set-mobile.jpg" srcset="./img/week-product/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" width="260" height="315">
@@ -244,8 +251,6 @@
     </form>
   </div>
 </div>
-<script src="./js/main-navigation.js"></script>
-<script src="./js/modal.js"></script>
-<script src="./js/slider.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>

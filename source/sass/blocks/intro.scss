@@ -9,13 +9,25 @@
     background-position: top center;
     background-color: $color-additional-grey4;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/background-mobile@2x.jpg");
+    }
+
     @include tablet {
       background-image: url("../img/intro/background-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/background-tablet@2x.jpg");
+      }
     }
 
     @include desktop {
       background-image: url("../img/intro/background-desktop.jpg");
       background-position: top -39px center;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/background-desktop@2x.jpg");
+      }
     }
   }
 

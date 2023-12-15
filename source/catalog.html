@@ -12,7 +12,11 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="./fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
 <body>
@@ -74,6 +78,9 @@
       <li class="products__list-item product">
         <a class="product__link" href="#">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="./img/products/rabbit/rabbit-desktop.webp 1x, ./img/products/rabbit/rabbit-desktop@2x.webp 2x" width="316" height="462">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/products/rabbit/rabbit-tablet.webp 1x, ./img/products/rabbit/rabbit-tablet@2x.webp 2x" width="334" height="334">
+            <source type="image/webp" srcset="./img/products/rabbit/rabbit-mobile.webp 1x, ./img/products/rabbit/rabbit-mobile@2x.webp 2x" width="260" height="195">
             <source media="(min-width: 1150px)" srcset="./img/products/rabbit/rabbit-desktop.jpg 1x, ./img/products/rabbit/rabbit-desktop@2x.jpg 2x" width="316" height="462">
             <source media="(min-width: 768px)" srcset="./img/products/rabbit/rabbit-tablet.jpg 1x, ./img/products/rabbit/rabbit-tablet@2x.jpg 2x" width="334" height="334">
             <img class="product__image" src="./img/products/rabbit/rabbit-mobile.jpg" srcset="./img/products/rabbit/rabbit-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик." width="260" height="195">
@@ -91,6 +98,9 @@
       <li class="products__list-item product">
         <a class="product__link" href="#">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="./img/products/basket/basket-desktop.webp 1x, ./img/products/basket/basket-desktop@2x.webp 2x" width="316" height="462">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/products/basket/basket-tablet.webp 1x, ./img/products/basket/basket-tablet@2x.webp 2x" width="334" height="334">
+            <source type="image/webp" srcset="./img/products/basket/basket-mobile.webp 1x, ./img/products/basket/basket-mobile@2x.webp 2x" width="260" height="195">
             <source media="(min-width: 1150px)" srcset="./img/products/basket/basket-desktop.jpg 1x, ./img/products/basket/basket-desktop@2x.jpg 2x" width="316" height="462">
             <source media="(min-width: 768px)" srcset="./img/products/basket/basket-tablet.jpg 1x, ./img/products/basket/basket-tablet@2x.jpg 2x" width="334" height="334">
             <img class="product__image" src="./img/products/basket/basket-mobile.jpg" srcset="./img/products/basket/basket-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик." width="260" height="195">
@@ -108,6 +118,9 @@
       <li class="products__list-item product">
         <a class="product__link" href="#">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="./img/products/toy-basket/toy-basket-desktop.webp 1x, ./img/products/toy-basket/toy-basket-desktop@2x.webp 2x" width="316" height="462">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/products/toy-basket/toy-basket-tablet.webp 1x, ./img/products/toy-basket/toy-basket-tablet@2x.webp 2x" width="334" height="334">
+            <source type="image/webp" srcset="./img/products/toy-basket/toy-basket-mobile.webp 1x, ./img/products/toy-basket/toy-basket-mobile@2x.webp 2x" width="260" height="195">
             <source media="(min-width: 1150px)" srcset="./img/products/toy-basket/toy-basket-desktop.jpg 1x, ./img/products/toy-basket/toy-basket-desktop@2x.jpg 2x" width="316" height="462">
             <source media="(min-width: 768px)" srcset="./img/products/toy-basket/toy-basket-tablet.jpg 1x, ./img/products/toy-basket/toy-basket-tablet@2x.jpg 2x" width="334" height="334">
             <img class="product__image" src="./img/products/toy-basket/toy-basket-mobile.jpg" srcset="./img/products/toy-basket/toy-basket-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик." width="260" height="195">
@@ -130,6 +143,9 @@
     </div>
     <a class="video__link" href="#" aria-label="Открыть видео.">
       <picture>
+        <source type="image/webp" media="(min-width: 1150px)" srcset="./img/video/video-desktop.webp 1x, ./img/video/video-desktop@2x.webp 2x" width="682" height="455">
+        <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-tablet.webp 1x, ./img/video/video-tablet@2x.webp 2x" width="668" height="455">
+        <source type="image/webp" srcset="./img/video/video-mobile.webp 1x, ./img/video/video-mobile@2x.webp 2x" width="260" height="150">
         <source media="(min-width: 1150px)" srcset="./img/video/video-desktop.jpg 1x, ./img/video/video-desktop@2x.jpg 2x" width="682" height="455">
         <source media="(min-width: 768px)" srcset="./img/video/video-tablet.jpg 1x, ./img/video/video-tablet@2x.jpg 2x" width="668" height="455">
         <img class="video__image" src="./img/video/video-mobile.jpg" srcset="./img/video/video-mobile@2x.jpg 2x" alt="Вязаная корзинка." width="260" height="150">
@@ -202,7 +218,6 @@
     </form>
   </div>
 </div>
-<script src="./js/main-navigation.js"></script>
-<script src="./js/modal.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>
