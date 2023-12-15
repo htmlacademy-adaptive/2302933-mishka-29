@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 260px;
   justify-content: center;
-  padding: 15px 30px 58px;
+  padding: 16px 30px 58px;
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -13,7 +13,7 @@
 
   @include desktop {
     padding-bottom: 105px;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 683px 1fr;
     grid-template-rows: min-content min-content;
   }
 }
@@ -52,12 +52,42 @@
 }
 
 .video__link {
+  position: relative;
+  background-color: $color-grey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 101px;
+    height: 77px;
+    background-image: url("../img/icons/play-button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(120%) translate(-40%, -40%);
+    }
+  }
+
+  &:active {
+    &::before {
+      transform: scale(80%) translate(-60%, -65%);
+      opacity: 0.3;
+    }
+  }
+
   @include tablet {
     order: -1;
   }
 
   @include desktop {
-    align-self: center;
+    align-self: start;
     grid-row: 1/-1;
   }
 }
@@ -82,6 +112,7 @@
   border-right: 1px solid $color-additional-grey2;
 
   @include tablet {
+    gap: 40px;
     padding: 15px 41px 45px;
   }
 

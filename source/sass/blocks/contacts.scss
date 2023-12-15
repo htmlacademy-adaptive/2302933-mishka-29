@@ -11,14 +11,14 @@
     display: grid;
     grid-template-columns: 1fr 527px;
     grid-template-rows: min-content min-content;
-    gap: 0 60px;
-    padding: 94px 50px 105px 113px;
+    gap: 0 53px;
+    padding: 93px 50px 105px 113px;
     background-size: 1052px 23px;
   }
 }
 
 .contacts__body {
-  padding: 43px 30px 62px;
+  padding: 44px 30px 62px;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -26,14 +26,21 @@
   @include tablet {
     background-image: url("../img/icons/flag.svg");
     background-repeat: no-repeat;
-    background-position: top 63px right 50px;
-    padding: 85px 50px 49px;
+    background-position: top 62px right 53px;
+    padding: 85px 50px 48px;
     gap: 49px;
   }
 
   @include desktop {
     background-position: top 62px left;
     padding: 79px 0 0 112px;
+    gap: 35px;
+  }
+}
+
+.contacts__title {
+  @include tablet {
+    max-width: 500px;
   }
 }
 
@@ -55,10 +62,10 @@
 
 .contacts__text-container {
   display: flex;
-  gap: 30px;
+  gap: 34px;
 
   @include tablet {
-    gap: 22px;
+    gap: 26px;
     align-items: flex-start;
   }
 }
@@ -76,8 +83,10 @@
   color: $color-text;
   font-size: 14px;
   line-height: 30px;
-  border-bottom: 1px solid $color-light-main;
-  transition: color 0.3s ease, border-color 0.3s ease;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: $color-light-main;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
 
   @include tablet {
     font-size: 17px;
@@ -85,12 +94,12 @@
 
   &:hover {
     color: $color-additional-main2;
-    border-color: $color-additional-main2;
+    text-decoration-color: $color-additional-main2;
   }
 
   &:active {
     color: $color-additional-main2;
-    border-color: rgba($color-additional-main2, 0.1);
+    text-decoration-color: rgba($color-additional-main2, 0.1);
   }
 }
 
@@ -122,11 +131,11 @@
 
 .contacts__wrapper {
   display: flex;
-  padding: 42px 30px 39px;
+  padding: 37px 30px 39px;
 
   @include tablet {
     justify-content: center;
-    padding: 55px 50px 57px;
+    padding: 50px 50px 57px;
   }
 
   @include desktop {

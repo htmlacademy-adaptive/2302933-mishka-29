@@ -3,8 +3,14 @@
 .socials {
   @include reset-list;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 29px;
+
+  @include tablet {
+    max-width: 250px;
+  }
 }
 
 .socials__link {

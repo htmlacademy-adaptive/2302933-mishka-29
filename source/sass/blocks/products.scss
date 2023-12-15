@@ -4,7 +4,11 @@
   padding: 30px 30px 15px;
 
   @include tablet {
-    padding: 50px;
+    padding: 67px 50px 33px;
+  }
+
+  @include desktop {
+    padding: 111px 50px 37px;
   }
 }
 

@@ -3,7 +3,6 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 
   @include tablet {
     gap: 0;
@@ -30,35 +29,76 @@
 
   &--user-info {
     gap: 22px;
+    padding-top: 9px;
+    padding-bottom: 32px;
+
+    @include tablet {
+      gap: 24px;
+      padding-left: 217px;
+      padding-top: 49px;
+      padding-bottom: 51px;
+    }
+
+    @include desktop {
+      padding-left: 227px;
+    }
   }
 
   &--user-contacts {
+    padding-bottom: 34px;
+
     @include tablet {
       gap: 24px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &--textarea {
+    padding-top: 2px;
+
+    @include tablet {
+      padding-top: 50px;
+      padding-left: 217px;
+    }
+
+    @include desktop {
+      padding-left: 225px;
+      padding-bottom: 49px;
     }
   }
 
   &--checkbox {
     align-items: flex-start;
     gap: 23px;
+    padding-top: 4px;
+    padding-bottom: 34px;
 
     @include tablet {
-      gap: 24px 30px;
+      gap: 24px 23px;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      padding-left: 217px;
+      padding-top: 52px;
+      padding-bottom: 50px;
     }
 
     @include desktop {
       grid-template-columns: repeat(3, 1fr);
+      gap: 24px 98px;
+      padding: 48px 194px 52px 225px;
     }
   }
 
   &--radio {
+    padding-top: 11px;
     align-items: flex-start;
     gap: 12px;
+    padding-bottom: 33px;
 
     @include tablet {
-      gap: 24px;
+      gap: 25px;
+      padding-top: 52px;
+      padding-bottom: 49px;
     }
   }
 }
@@ -94,7 +134,8 @@
   }
 
   @include desktop {
-    left: 97px;
+    left: 111px;
+    max-width: 100px;
   }
 
   &--main {
@@ -102,6 +143,10 @@
 
     @include tablet {
       top: 66px;
+    }
+
+    @include desktop {
+      top: 68px;
     }
   }
 

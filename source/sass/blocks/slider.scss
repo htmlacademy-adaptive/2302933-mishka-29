@@ -3,7 +3,7 @@
 .slider {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 29px;
 }
 
 .slider__body {
@@ -19,14 +19,14 @@
   grid-template-columns: 1fr 1fr;
 
   @include tablet {
-    width: 150px;
+    min-width: 165px;
     position: absolute;
-    bottom: 120px;
-    right: 50px;
+    bottom: 116px;
+    right: 56px;
   }
 
   @include desktop {
-    bottom: 170px;
+    bottom: 166px;
   }
 }
 

@@ -6,17 +6,17 @@
   padding: 31px 30px 36px;
 
   @include tablet {
-    padding: 40px 50px 36px;
+    padding: 40px 50px 53px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: min-content min-content min-content;
-    gap: 37px 42px;
+    grid-template-rows: min-content min-content 1fr;
+    gap: 38px 42px;
   }
 
   @include desktop {
-    padding: 44px 50px 73px 85px;
+    padding: 39px 50px 73px 95px;
     position: relative;
-    grid-template-columns: repeat(2, min-content);
+    grid-template-columns: 1fr 1fr;
     column-gap: 58px;
   }
 }
@@ -33,18 +33,22 @@
   }
 
   @include desktop {
-    padding-top: 60px;
+    padding-top: 66px;
     z-index: 1;
     grid-column: 1/-1;
     grid-row: 1/2;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    gap: 43px;
+    gap: 30px;
   }
 }
 
 .week-product__title {
   margin-bottom: 3px;
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
 .week-product__subtitle {
@@ -57,6 +61,7 @@
     line-height: 17px;
     max-width: 100px;
     text-align: center;
+    padding-right: 26px;
   }
 }
 
@@ -67,12 +72,13 @@
   margin-bottom: 30px;
 
   @include tablet {
+    margin: 0;
     gap: 38px;
   }
 
   @include desktop {
-    padding-left: 150px;
-    gap: 52px;
+    padding-left: 130px;
+    gap: 51px;
   }
 }
 
@@ -134,14 +140,15 @@
   }
 
   @include tablet {
-    padding-top: 11px;
+    padding-top: 12px;
+    align-self: auto;
     margin: 0;
     grid-row: 2/4;
     grid-column: 2/3;
   }
 
   @include desktop {
-    padding: 0;
+    padding-top: 7px;
     grid-row: 1/-1;
     grid-column: 2/3;
   }
@@ -155,11 +162,11 @@
   @include tablet {
     margin-top: auto;
     gap: 32px;
-    padding-top: 23px;
+    padding-top: 22px;
   }
 
   @include desktop {
-    padding-left: 150px;
+    padding-left: 130px;
   }
 }
 

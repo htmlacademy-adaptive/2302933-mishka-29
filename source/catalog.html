@@ -16,29 +16,50 @@
   <title>HTML Academy: Мишка</title>
 </head>
 <body>
-<header class="page-header">
+<header class="page-header page-header--extra page-header--nojs">
   <div class="page-header__wrapper page-wrapper">
     <a class="page-header__logo" href="index.html" aria-label="Перейти на главную страницу.">
-      <img src="./img/logos/main-logo-mobile.svg" alt="Логотип Мишки." width="86" height="35">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="./img/logos/main-logo-desktop.svg" width="149" height="72">
+        <source media="(min-width: 768px)" srcset="./img/logos/main-logo-tablet.svg" width="114" height="46">
+        <img src="./img/logos/main-logo-mobile.svg" alt="Логотип Мишки." width="86" height="35">
+      </picture>
     </a>
     <nav class="page-header__navigation main-navigation">
-      <button class="main-navigation__toggle" type="button" aria-label="Открыть / Закрыть меню."></button>
-      <ul class="main-navigation__list main-navigation__list--first">
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="#" aria-label="Обновить страницу.">Каталог товаров</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="form.html" aria-label="Перейти на страницу формы.">Вязание на заказ</a>
-        </li>
-      </ul>
-      <ul class="main-navigation__list main-navigation__second">
-        <li class="main-navigation__item">
-          <a class="main-navigation__link main-navigation__link--search" href="#" aria-label="Поиск по сайту.">Поиск по сайту</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link main-navigation__link--cart" href="#" aria-label="Открыть корзину.">Корзина: пока пуста</a>
-        </li>
-      </ul>
+      <button class="main-navigation__toggle main-navigation__toggle--default" type="button" aria-label="Открыть / Закрыть меню.">
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--first"></span>
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--second"></span>
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--third"></span>
+      </button>
+      <div class="main-navigation__lists main-navigation__lists--closed">
+        <ul class="main-navigation__list main-navigation__list--first">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--catalog" href="catalog.html" aria-label="Обновить страницу.">Каталог товаров</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--form" href="form.html" aria-label="Перейти на страницу формы.">Вязание на заказ</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу c новыми поступлениями.">Новые поступления</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу распродажи.">Распродажа</a>
+          </li>
+        </ul>
+        <ul class="main-navigation__list main-navigation__list--second">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--search" href="#" aria-label="Поиск по сайту.">
+              <span>Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--cart" href="#" aria-label="Открыть корзину.">Корзина: пока пуста</a>
+          </li>
+          <li class="main-navigation__item main-navigation__item--delivery">
+            <span>Бесплатная доставка по России</span>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
@@ -93,7 +114,7 @@
           </picture>
         </a>
         <div class="product__content">
-          <a class="product__title" href="#">Большая корзинка для игрушек</a>
+          <a class="product__title" href="#">Большая корзинка для&nbsp;игрушек</a>
           <span class="product__description">Диаметр 30 см, высота 30 см</span>
           <div class="product__container">
             <span class="product__price">1 500 руб.</span>
