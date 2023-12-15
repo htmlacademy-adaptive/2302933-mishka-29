@@ -1,0 +1,212 @@
+//ФОРМА
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    gap: 0;
+  }
+}
+
+.form__group {
+  position: relative;
+  border: none;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  @include tablet {
+    padding: 50px 50px 50px 220px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px 225px;
+  }
+
+  &--user-info {
+    gap: 22px;
+    padding-top: 9px;
+    padding-bottom: 32px;
+
+    @include tablet {
+      gap: 24px;
+      padding-left: 217px;
+      padding-top: 49px;
+      padding-bottom: 51px;
+    }
+
+    @include desktop {
+      padding-left: 227px;
+    }
+  }
+
+  &--user-contacts {
+    padding-bottom: 34px;
+
+    @include tablet {
+      gap: 24px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &--textarea {
+    padding-top: 2px;
+
+    @include tablet {
+      padding-top: 50px;
+      padding-left: 217px;
+    }
+
+    @include desktop {
+      padding-left: 225px;
+      padding-bottom: 49px;
+    }
+  }
+
+  &--checkbox {
+    align-items: flex-start;
+    gap: 23px;
+    padding-top: 4px;
+    padding-bottom: 34px;
+
+    @include tablet {
+      gap: 24px 23px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-left: 217px;
+      padding-top: 52px;
+      padding-bottom: 50px;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px 98px;
+      padding: 48px 194px 52px 225px;
+    }
+  }
+
+  &--radio {
+    padding-top: 11px;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 33px;
+
+    @include tablet {
+      gap: 25px;
+      padding-top: 52px;
+      padding-bottom: 49px;
+    }
+  }
+}
+
+.form__group-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  color: $color-main;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: $color-light-main;
+
+    @include tablet {
+      content: none;
+    }
+  }
+
+  @include tablet {
+    margin: 0;
+    position: absolute;
+    left: 50px;
+    max-width: 150px;
+  }
+
+  @include desktop {
+    left: 111px;
+    max-width: 100px;
+  }
+
+  &--main {
+    margin-bottom: 20px;
+
+    @include tablet {
+      top: 66px;
+    }
+
+    @include desktop {
+      top: 68px;
+    }
+  }
+
+  &--phone {
+    margin-bottom: 5px;
+
+    @include tablet {
+      margin: 0;
+      top: 66px;
+    }
+  }
+
+  &--email {
+    margin-bottom: 5px;
+    margin-top: 35px;
+
+    @include tablet {
+      margin: 0;
+      top: 143px;
+    }
+  }
+}
+
+.form__background-container {
+  @include tablet {
+    background-color: $color-grey;
+  }
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 17px 30px 55px;
+
+  @include tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 50px 50px;
+  }
+
+  @include desktop {
+    width: 100%;
+    padding: 0 225px 50px;
+  }
+}
+
+.form__button {
+  @include tablet {
+    min-width: 230px;
+  }
+}
+
+.form__container-text {
+  font-size: 14px;
+  line-height: 16px;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}

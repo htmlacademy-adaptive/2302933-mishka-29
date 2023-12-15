@@ -1,0 +1,8 @@
+//ОБЕРТКА СТРАНИЦЫ
+
+.page-wrapper {
+  @include desktop {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+}

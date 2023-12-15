@@ -1,0 +1,81 @@
+//МОДАЛЬНОЕ ОКНО
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 2;
+  display: flex;
+  background-color: rgba($color-white, 0.9);
+
+  &--closed {
+    display: none;
+  }
+}
+
+.modal__content {
+  width: 100%;
+  max-width: 568px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 29px 30px 46px;
+  border: 1px solid $color-additional-grey3;
+  background: $color-white;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  margin: auto;
+
+  @include tablet {
+    padding: 38px 92px 46px;
+    gap: 11px;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  color: $color-black;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.modal__container {
+  padding: 22px 0 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  border: none;
+  gap: 7px;
+
+  @include tablet {
+    padding-top: 20px;
+  }
+}
+
+.modal__text {
+  padding: 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+
+  @include tablet {
+    font-size: 17px;
+  }
+}

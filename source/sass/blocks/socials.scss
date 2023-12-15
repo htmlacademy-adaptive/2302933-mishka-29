@@ -1,0 +1,35 @@
+//БЛОК СОЦИАЛЬНЫХ СЕТЕЙ
+
+.socials {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 29px;
+
+  @include tablet {
+    max-width: 250px;
+  }
+}
+
+.socials__link {
+  display: block;
+
+  svg {
+    fill: $color-dark-grey;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-additional-main2;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba($color-additional-main2, 0.3);
+    }
+  }
+}

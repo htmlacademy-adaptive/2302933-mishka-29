@@ -3,102 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="description" content="Каталог с милыми штучками ручной работы для дома">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="./fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
 <body>
-<header class="page-header">
+<header class="page-header page-header--extra page-header--nojs">
   <div class="page-header__wrapper page-wrapper">
     <a class="page-header__logo" href="index.html" aria-label="Перейти на главную страницу.">
-      <img src="./img/logos/main-logo-mobile.svg" alt="Логотип Мишки." width="86" height="35">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="./img/logos/main-logo-desktop.svg" width="149" height="72">
+        <source media="(min-width: 768px)" srcset="./img/logos/main-logo-tablet.svg" width="114" height="46">
+        <img src="./img/logos/main-logo-mobile.svg" alt="Логотип Мишки." width="86" height="35">
+      </picture>
     </a>
     <nav class="page-header__navigation main-navigation">
-      <button class="main-navigation__toggle" type="button" aria-label="Открыть / Закрыть меню."></button>
-      <ul class="main-navigation__list main-navigation__list--first">
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="#" aria-label="Обновить страницу.">Каталог товаров</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="form.html" aria-label="Перейти на страницу формы.">Вязание на заказ</a>
-        </li>
-      </ul>
-      <ul class="main-navigation__list main-navigation__second">
-        <li class="main-navigation__item">
-          <a class="main-navigation__link main-navigation__link--search" href="#" aria-label="Поиск по сайту.">Поиск по сайту</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link main-navigation__link--cart" href="#" aria-label="Открыть корзину.">Корзина: пока пуста</a>
-        </li>
-      </ul>
+      <button class="main-navigation__toggle main-navigation__toggle--default" type="button" aria-label="Открыть / Закрыть меню.">
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--first"></span>
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--second"></span>
+        <span class="main-navigation__toggle-line main-navigation__toggle-line--third"></span>
+      </button>
+      <div class="main-navigation__lists main-navigation__lists--closed">
+        <ul class="main-navigation__list main-navigation__list--first">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--catalog" href="catalog.html" aria-label="Обновить страницу.">Каталог товаров</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--form" href="form.html" aria-label="Перейти на страницу формы.">Вязание на заказ</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу c новыми поступлениями.">Новые поступления</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу распродажи.">Распродажа</a>
+          </li>
+        </ul>
+        <ul class="main-navigation__list main-navigation__list--second">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--search" href="#" aria-label="Поиск по сайту.">
+              <span>Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--cart" href="#" aria-label="Открыть корзину.">Корзина: пока пуста</a>
+          </li>
+          <li class="main-navigation__item main-navigation__item--delivery">
+            <span>Бесплатная доставка по России</span>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
 <main class="page-main">
+  <section class="intro intro--main">
+    <div class="intro__wrapper">
+      <h1 class="title title--main">Каталог товаров</h1>
+    </div>
+  </section>
   <section class="products page-wrapper">
     <ul class="products__list">
       <li class="products__list-item product">
         <a class="product__link" href="#">
-          <img class="product__image" src="#" alt="Зайчик-попрыгайчик." width="260" height="195">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="./img/products/rabbit/rabbit-desktop.webp 1x, ./img/products/rabbit/rabbit-desktop@2x.webp 2x" width="316" height="462">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/products/rabbit/rabbit-tablet.webp 1x, ./img/products/rabbit/rabbit-tablet@2x.webp 2x" width="334" height="334">
+            <source type="image/webp" srcset="./img/products/rabbit/rabbit-mobile.webp 1x, ./img/products/rabbit/rabbit-mobile@2x.webp 2x" width="260" height="195">
+            <source media="(min-width: 1150px)" srcset="./img/products/rabbit/rabbit-desktop.jpg 1x, ./img/products/rabbit/rabbit-desktop@2x.jpg 2x" width="316" height="462">
+            <source media="(min-width: 768px)" srcset="./img/products/rabbit/rabbit-tablet.jpg 1x, ./img/products/rabbit/rabbit-tablet@2x.jpg 2x" width="334" height="334">
+            <img class="product__image" src="./img/products/rabbit/rabbit-mobile.jpg" srcset="./img/products/rabbit/rabbit-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик." width="260" height="195">
+          </picture>
         </a>
-        <a class="product__title" href="#">Зайчик-попрыгайчик</a>
-        <span class="product__description">Рост 30 см, вес 200 г</span>
-        <div class="product__container">
-          <span class="product__price">1 200 руб.</span>
-          <button class="product__button" type="button" aria-label="Купить товар."></button>
+        <div class="product__content">
+          <a class="product__title" href="#">Зайчик-попрыгайчик</a>
+          <span class="product__description">Рост 30 см, вес 200 г</span>
+          <div class="product__container">
+            <span class="product__price">1 200 руб.</span>
+            <button class="product__button modalOpen" type="button" aria-label="Купить товар."></button>
+          </div>
         </div>
       </li>
       <li class="products__list-item product">
         <a class="product__link" href="#">
-          <img class="product__image" src="#" alt="Корзинка для белья." width="260" height="195">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="./img/products/basket/basket-desktop.webp 1x, ./img/products/basket/basket-desktop@2x.webp 2x" width="316" height="462">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/products/basket/basket-tablet.webp 1x, ./img/products/basket/basket-tablet@2x.webp 2x" width="334" height="334">
+            <source type="image/webp" srcset="./img/products/basket/basket-mobile.webp 1x, ./img/products/basket/basket-mobile@2x.webp 2x" width="260" height="195">
+            <source media="(min-width: 1150px)" srcset="./img/products/basket/basket-desktop.jpg 1x, ./img/products/basket/basket-desktop@2x.jpg 2x" width="316" height="462">
+            <source media="(min-width: 768px)" srcset="./img/products/basket/basket-tablet.jpg 1x, ./img/products/basket/basket-tablet@2x.jpg 2x" width="334" height="334">
+            <img class="product__image" src="./img/products/basket/basket-mobile.jpg" srcset="./img/products/basket/basket-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик." width="260" height="195">
+          </picture>
         </a>
-        <a class="product__title" href="#">Корзинка для белья</a>
-        <span class="product__description">Диаметр 15 см, высота 10 см</span>
-        <div class="product__container">
-          <span class="product__price">690 руб.</span>
-          <button class="product__button" type="button" aria-label="Купить товар."></button>
+        <div class="product__content">
+          <a class="product__title" href="#">Корзинка для белья</a>
+          <span class="product__description">Диаметр 15 см, высота 10 см</span>
+          <div class="product__container">
+            <span class="product__price">690 руб.</span>
+            <button class="product__button modalOpen" type="button" aria-label="Купить товар."></button>
+          </div>
         </div>
       </li>
       <li class="products__list-item product">
         <a class="product__link" href="#">
-          <img class="product__image" src="#" alt="Большая корзинка для игрушек." width="260" height="195">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="./img/products/toy-basket/toy-basket-desktop.webp 1x, ./img/products/toy-basket/toy-basket-desktop@2x.webp 2x" width="316" height="462">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/products/toy-basket/toy-basket-tablet.webp 1x, ./img/products/toy-basket/toy-basket-tablet@2x.webp 2x" width="334" height="334">
+            <source type="image/webp" srcset="./img/products/toy-basket/toy-basket-mobile.webp 1x, ./img/products/toy-basket/toy-basket-mobile@2x.webp 2x" width="260" height="195">
+            <source media="(min-width: 1150px)" srcset="./img/products/toy-basket/toy-basket-desktop.jpg 1x, ./img/products/toy-basket/toy-basket-desktop@2x.jpg 2x" width="316" height="462">
+            <source media="(min-width: 768px)" srcset="./img/products/toy-basket/toy-basket-tablet.jpg 1x, ./img/products/toy-basket/toy-basket-tablet@2x.jpg 2x" width="334" height="334">
+            <img class="product__image" src="./img/products/toy-basket/toy-basket-mobile.jpg" srcset="./img/products/toy-basket/toy-basket-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик." width="260" height="195">
+          </picture>
         </a>
-        <a class="product__title" href="#">Большая корзинка для игрушек</a>
-        <span class="product__description">Диаметр 30 см, высота 30 см</span>
-        <div class="product__container">
-          <span class="product__price">1 500 руб.</span>
-          <button class="product__button" type="button" aria-label="Купить товар."></button>
+        <div class="product__content">
+          <a class="product__title" href="#">Большая корзинка для&nbsp;игрушек</a>
+          <span class="product__description">Диаметр 30 см, высота 30 см</span>
+          <div class="product__container">
+            <span class="product__price">1 500 руб.</span>
+            <button class="product__button modalOpen" type="button" aria-label="Купить товар."></button>
+          </div>
         </div>
       </li>
     </ul>
   </section>
   <section class="video page-wrapper">
-    <h2 class="video__title">Процесс производства</h2>
+    <div class="video__top">
+      <h2 class="video__title">Процесс производства</h2>
+    </div>
     <a class="video__link" href="#" aria-label="Открыть видео.">
-        <img class="video__image" src="#" alt="Вязаная корзинка." width="260" height="150">
+      <picture>
+        <source type="image/webp" media="(min-width: 1150px)" srcset="./img/video/video-desktop.webp 1x, ./img/video/video-desktop@2x.webp 2x" width="682" height="455">
+        <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-tablet.webp 1x, ./img/video/video-tablet@2x.webp 2x" width="668" height="455">
+        <source type="image/webp" srcset="./img/video/video-mobile.webp 1x, ./img/video/video-mobile@2x.webp 2x" width="260" height="150">
+        <source media="(min-width: 1150px)" srcset="./img/video/video-desktop.jpg 1x, ./img/video/video-desktop@2x.jpg 2x" width="682" height="455">
+        <source media="(min-width: 768px)" srcset="./img/video/video-tablet.jpg 1x, ./img/video/video-tablet@2x.jpg 2x" width="668" height="455">
+        <img class="video__image" src="./img/video/video-mobile.jpg" srcset="./img/video/video-mobile@2x.jpg 2x" alt="Вязаная корзинка." width="260" height="150">
+      </picture>
     </a>
-    <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-    <button class="video__button" type="button">СДелать заказ</button>
+    <div class="video__bottom">
+      <p class="video__description">По&nbsp;просьбам&nbsp;наших&nbsp;любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <button class="video__button button button--main" type="button">СДелать заказ</button>
+    </div>
   </section>
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper page-wrapper">
-    <a class="page-footer__logo" href="index.html" aria-label="Перейти на главную страницу.">
+    <a class="page-footer__logo" href="#" aria-label="Перейти на главную страницу.">
+      <svg width="102" height="34" aria-hidden="true" focusable="false">
+        <use href="./img/sprite.svg#main-logo-footer"></use>
+      </svg>
     </a>
     <ul class="page-footer__socials socials">
       <li class="socials__item">
-        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу во вконтакте."></a>
+        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу во вконтакте.">
+          <svg width="28" height="22" aria-hidden="true" focusable="false">
+            <use href="./img/sprite.svg#icon-vkontakte"></use>
+          </svg>
+        </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу на ютубе."></a>
+        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу на ютубе.">
+          <svg width="28" height="22" aria-hidden="true" focusable="false">
+            <use href="./img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу в телеграм."></a>
+        <a class="socials__link" href="#" target="_blank" aria-label="Перейти на нашу страницу в телеграм.">
+          <svg width="28" height="22" aria-hidden="true" focusable="false">
+            <use href="./img/sprite.svg#icon-telegram"></use>
+          </svg>
+        </a>
       </li>
     </ul>
+    <a class="page-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт htmlacademy.">
+      <span class="page-footer__developer-text">Разработано</span>
+      <svg width="27" height="33" aria-hidden="true" focusable="false">
+        <use href="./img/sprite.svg#logo-htmlacademy"></use>
+      </svg>
+    </a>
   </div>
-  <a class="page-footer__developer" href="#" aria-label="Перейти на сайт htmlacademy.">
-    <span class="page-footer__developer-text">Разработано</span>
-  </a>
 </footer>
+<div class="modal modal--closed">
+  <div class="modal__content">
+    <p class="modal__title">Добавить в&nbsp;корзину</p>
+    <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="modal__container">
+        <legend class="modal__text">Выберите размер:</legend>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="small" checked>
+          <span class="field__mark field__mark--modal">S</span>
+        </label>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="medium">
+          <span class="field__mark field__mark--modal">M</span>
+        </label>
+        <label class="field">
+          <input class="visually-hidden field__input--radio" type="radio" name="size" value="large">
+          <span class="field__mark field__mark--modal">L</span>
+        </label>
+      </fieldset>
+      <button class="modal__button button button--extra" type="submit">Добавить</button>
+    </form>
+  </div>
+</div>
+<script src="./js/script.js"></script>
 </body>
 </html>

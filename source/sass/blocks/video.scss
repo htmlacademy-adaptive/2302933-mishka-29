@@ -1,0 +1,135 @@
+//БЛОК ВИДЕО
+
+.video {
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
+  padding: 16px 30px 58px;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    padding: 20px 50px 64px;
+  }
+
+  @include desktop {
+    padding-bottom: 105px;
+    grid-template-columns: 683px 1fr;
+    grid-template-rows: min-content min-content;
+  }
+}
+
+.video__top {
+  padding: 20px 12px 27px 90px;
+  border-top: 1px solid $color-additional-grey2;
+  border-left: 1px solid $color-additional-grey2;
+  border-right: 1px solid $color-additional-grey2;
+  background-image: url("../img/icons/camera.svg");
+  background-repeat: no-repeat;
+  background-position: top 35px left 34px;
+
+  @include tablet {
+    padding: 40px 106px 10px;
+    background-position: top 39px left 42px;
+  }
+
+  @include desktop {
+    border-left: none;
+    padding: 95px 109px 10px 79px;
+    background-position: top 47px left 79px;
+  }
+}
+
+.video__title {
+  margin: 0;
+  color: $color-black;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.video__link {
+  position: relative;
+  background-color: $color-grey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 101px;
+    height: 77px;
+    background-image: url("../img/icons/play-button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(120%) translate(-40%, -40%);
+    }
+  }
+
+  &:active {
+    &::before {
+      transform: scale(80%) translate(-60%, -65%);
+      opacity: 0.3;
+    }
+  }
+
+  @include tablet {
+    order: -1;
+  }
+
+  @include desktop {
+    align-self: start;
+    grid-row: 1/-1;
+  }
+}
+
+.video__image {
+  display: block;
+
+  @include tablet {
+    width: 100%;
+    max-height: 455px;
+    object-fit: cover;
+  }
+}
+
+.video__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  padding: 35px 33px 32px;
+  border-bottom: 1px solid $color-additional-grey2;
+  border-left: 1px solid $color-additional-grey2;
+  border-right: 1px solid $color-additional-grey2;
+
+  @include tablet {
+    gap: 40px;
+    padding: 15px 41px 45px;
+  }
+
+  @include desktop {
+    border-left: none;
+    gap: 51px;
+    padding: 17px 56px 59px 79px;
+  }
+}
+
+.video__description {
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+
+  @include tablet {
+    line-height: 30px;
+    font-size: 15px;
+  }
+}

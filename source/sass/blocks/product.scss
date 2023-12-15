@@ -1,0 +1,128 @@
+//КАРТОЧКА ТОВАРА
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include tablet {
+    grid-template-columns: 334px 1fr;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.product__link {
+  background-color: $color-grey;
+}
+
+.product__image {
+  display: block;
+}
+
+.product__content {
+  display: flex;
+  flex-direction: column;
+  padding: 27px 27px 26px;
+  border: 1px solid $color-additional-grey2;
+  transition: box-shadow 0.3s ease;
+
+  @include tablet {
+    padding: 27px 32px 25px;
+  }
+
+  @include desktop {
+    flex-grow: 1;
+    padding: 28px 27px 24px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+  }
+}
+
+.product__title {
+  color: $color-black;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  max-width: 200px;
+  margin-bottom: 5px;
+
+  @include tablet {
+    max-width: none;
+    font-size: 20px;
+  }
+}
+
+.product__description {
+  font-size: 13px;
+  line-height: 30px;
+  margin-bottom: 18px;
+
+  @include tablet {
+    font-size: 15px;
+    margin-bottom: auto;
+  }
+
+  @include desktop {
+    padding-bottom: 14px;
+  }
+}
+
+.product__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid $color-additional-grey2;
+  padding-top: 22px;
+
+  @include desktop {
+    padding-right: 3px;
+  }
+}
+
+.product__price {
+  color: $color-black;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  max-width: 165px;
+
+  @include tablet {
+    font-size: 17px;
+  }
+}
+
+.product__button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 19px;
+    mask: url("../img/icons/cart.svg");
+    background-color: rgba($color-black, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $color-main;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba($color-main, 0.3);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+//БЛОК ТОВАРОВ
+
+.products {
+  padding: 30px 30px 15px;
+
+  @include tablet {
+    padding: 67px 50px 33px;
+  }
+
+  @include desktop {
+    padding: 111px 50px 37px;
+  }
+}
+
+.products__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 30px;
+
+  @include tablet {
+    justify-items: normal;
+    gap: 54px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 52px;
+  }
+}

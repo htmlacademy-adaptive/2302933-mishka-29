@@ -1,0 +1,90 @@
+//ПОДВАЛ САЙТА
+
+.page-footer {
+  background-color: $color-grey;
+}
+
+.page-footer__logo {
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+
+  svg {
+    fill: $color-black;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-additional-main2;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba($color-additional-main2, 0.3);
+    }
+  }
+}
+
+.page-footer__wrapper {
+  position: relative;
+  padding: 25px 30px 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 51px;
+
+  @include tablet {
+    padding: 51px 50px 58px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    left: 30px;
+    height: 1px;
+    background-color: $color-additional-grey;
+
+    @include tablet {
+      content: none;
+    }
+  }
+}
+
+.page-footer__developer {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+
+  svg {
+    fill: $color-main;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-additional-main2;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba($color-additional-main2, 0.3);
+    }
+  }
+}
+
+.page-footer__developer-text {
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-black;
+  max-width: 150px;
+}

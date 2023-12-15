@@ -1,0 +1,97 @@
+//БЛОК ОТЗЫВОВ
+
+.reviews {
+  padding: 30px 30px 45px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 40px 0;
+    position: relative;
+    padding: 109px 50px 117px;
+    background-image: url("../img/reviews/fabric.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom 67px left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/reviews/fabric@2x.jpg");
+    }
+  }
+
+  @include desktop {
+    gap: 35px 0;
+    padding: 107px 50px 163px 225px;
+    background-position: top 30px left 50px;
+  }
+}
+
+.reviews__title {
+  margin-bottom: 14px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.reviews__slider {
+  margin-bottom: 38px;
+
+  @include tablet {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+}
+
+.reviews__text {
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0 0 34px;
+
+  @include tablet {
+    font-size: 17px;
+    margin-bottom: 61px;
+  }
+
+  @include desktop {
+    margin-bottom: 44px;
+  }
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  @include tablet {
+    max-width: 500px;
+  }
+}
+
+.reviews__author {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-black;
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    font-size: 17px;
+  }
+}
+
+.reviews__username {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.reviews__link {
+  @include tablet {
+    width: 175px;
+    align-self: flex-start;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}

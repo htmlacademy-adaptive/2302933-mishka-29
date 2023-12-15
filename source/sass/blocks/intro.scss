@@ -1,0 +1,189 @@
+//БЛОК ИНТРО
+
+.intro {
+  position: relative;
+
+  &--index {
+    background-image: url("../img/intro/background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: $color-additional-grey4;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/background-mobile@2x.jpg");
+    }
+
+    @include tablet {
+      background-image: url("../img/intro/background-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/background-tablet@2x.jpg");
+      }
+    }
+
+    @include desktop {
+      background-image: url("../img/intro/background-desktop.jpg");
+      background-position: top -39px center;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/background-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--main {
+    background-color: $color-grey;
+    padding: 74px 30px 73px;
+
+    @include tablet {
+      padding: 57px 50px 86px;
+    }
+
+    @include desktop {
+      padding: 57px 50px 113px;
+    }
+  }
+
+  @include tablet {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../img/intro/zigzag.svg");
+      background-size: auto 24px;
+      height: 24px;
+    }
+  }
+
+  @include desktop {
+    &::after {
+      height: 34px;
+      background-size: auto 34px;
+    }
+  }
+}
+
+.intro__wrapper {
+  &--index {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    padding-top: 73px;
+
+    @include tablet {
+      padding: 111px 50px 12px;
+      gap: 371px;
+    }
+
+    @include desktop {
+      padding: 116px 50px 17px;
+      gap: 360px;
+    }
+  }
+}
+
+.intro__title {
+  padding: 0 30px 0;
+
+  @include desktop {
+    padding: 0 150px 0;
+  }
+}
+
+.intro__links {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.intro__container {
+  background-color: $color-additional-main3;
+}
+
+.intro__link {
+  display: block;
+  position: relative;
+  padding: 24px 160px 31px 30px;
+  min-height: 103px;
+  color: $color-white;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  @include tablet {
+    padding: 25px 167px 34px 37px;
+    font-size: 20px;
+    line-height: 30px;
+    min-height: 119px;
+  }
+
+  @include desktop {
+    padding-right: 350px;
+  }
+
+  &::before {
+    content: "";
+    background-color: rgba($color-dark-main, 0.5);
+    position: absolute;
+    transition: background-color 0.3s ease;
+  }
+
+  &--interior {
+    background-color: $color-main;
+
+    &::before {
+      top: 23px;
+      right: 36px;
+      width: 40px;
+      height: 62px;
+      mask: url("../img/icons/lamp.svg");
+
+      @include tablet {
+        top: 30px;
+        right: 36px;
+      }
+    }
+  }
+
+  &--toy {
+    background-color: $color-additional-main;
+
+    &::before {
+      top: 21px;
+      right: 27px;
+      width: 60px;
+      height: 60px;
+      mask: url("../img/icons/toy.svg");
+
+      @include tablet {
+        top: 31px;
+        right: 33px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $color-additional-main3;
+    transform: translateY(-5px);
+
+    &::before {
+      background-color: rgba($color-dark-main, 0.7);
+    }
+  }
+
+  &:active {
+    background-color: $color-additional-main3;
+    transform: translateY(-5px);
+
+    &::before {
+      background-color: rgba($color-dark-main, 0.3);
+    }
+  }
+}

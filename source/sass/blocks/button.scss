@@ -1,0 +1,39 @@
+//КНОПКИ
+
+.button {
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: $font-family-main;
+
+  &--main {
+    display: block;
+    padding: 14px 0;
+    color: $color-text;
+    font-size: 18px;
+    line-height: 20px;
+    border: 2px solid $color-text;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $color-text;
+      color: $color-white;
+    }
+
+    &:active {
+      background-color: $color-text;
+      color: rgba($color-white, 0.3);
+    }
+  }
+
+  &--extra {
+    color: $color-white;
+    font-size: 17px;
+    line-height: 16px;
+    padding: 18px 0;
+    border: none;
+    background-color: $color-main;
+  }
+}

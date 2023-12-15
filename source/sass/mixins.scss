@@ -1,0 +1,31 @@
+// МИКСИНЫ
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile-width-only) {
+    @content;
+  }
+}

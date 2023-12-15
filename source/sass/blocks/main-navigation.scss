@@ -1,0 +1,262 @@
+//ОСНОВНАЯ НАВИГАЦИЯ
+
+.main-navigation {
+  margin-left: auto;
+
+  @include tablet {
+    margin: 0;
+    flex-grow: 1;
+  }
+}
+
+.main-navigation__lists {
+  @include mobile {
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      background-color: $color-white;
+      position: absolute;
+      top: 79px;
+      right: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.main-navigation__list {
+  @include reset-list();
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+
+  &--first {
+    @include tablet {
+      padding-top: 88px;
+      gap: 0 36px;
+    }
+
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  &--second {
+    @include tablet {
+      justify-content: flex-end;
+      margin-left: auto;
+      grid-column: 2/3;
+    }
+  }
+}
+
+.main-navigation__toggle {
+  display: block;
+  padding: 0;
+  border: none;
+  width: 21px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+
+  &--active {
+    .main-navigation__toggle-line--first {
+      top: 9px;
+      transform: rotate(135deg);
+    }
+
+    .main-navigation__toggle-line--second {
+      opacity: 0;
+      right: -60px;
+    }
+
+    .main-navigation__toggle-line--third {
+      top: 9px;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &:hover .main-navigation__toggle-line {
+    background-color: $color-additional-main2;
+  }
+
+  &:active .main-navigation__toggle-line {
+    background-color: rgba($color-additional-main2, 0.3);
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.main-navigation__toggle-line {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: $color-light-black;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out, background-color 0.3s ease;
+
+  &--first {
+    top: 4px;
+  }
+
+  &--second {
+    top: 10px;
+  }
+
+  &--third {
+    top: 16px;
+  }
+}
+
+.main-navigation__item {
+  &--delivery {
+    display: none;
+
+    @include tablet {
+      display: block;
+      padding-top: 20px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  &--additional {
+    padding-left: 27px;
+  }
+}
+
+.main-navigation__link {
+  padding: 26px 0 27px 76px;
+  border-top: 1px solid $color-additional-grey2;
+  display: block;
+  color: $color-black;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  transition: color 0.3s ease;
+
+  @include tablet {
+    border: none;
+    padding: 21px 0 0;
+  }
+
+  &--additional {
+    display: none;
+
+    @include desktop {
+      display: block;
+      font-size: 15px;
+    }
+  }
+
+  &--catalog {
+    @include tablet {
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+      padding: 32px 0;
+    }
+  }
+
+  &--form {
+    @include tablet {
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+      padding: 32px 0 32px 35px;
+      border-left: 1px solid rgba($color-black, 0.1);
+    }
+  }
+
+  &--search {
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      mask: url("../img/icons/search.svg");
+      background-color: rgba($color-black, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    @include tablet {
+      padding: 0;
+      justify-content: center;
+      width: 84px;
+      min-height: 88px;
+      border-left: 1px solid rgba($color-black, 0.1);
+      border-right: 1px solid rgba($color-black, 0.1);
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  &--cart {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &::before {
+      content: "";
+      width: 21px;
+      height: 18px;
+      mask: url("../img/icons/cart.svg");
+      background-color: rgba($color-black, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    @include tablet {
+      padding: 32px 0 32px 31px;
+      gap: 31px;
+    }
+  }
+
+  &:hover {
+    color: rgba($color-black, 0.6);
+
+    &::before {
+      background-color: $color-main;
+    }
+  }
+
+  &:active {
+    color: rgba($color-black, 0.3);
+
+    &::before {
+      background-color: rgba($color-main, 0.3);
+    }
+  }
+}
