@@ -1,10 +1,13 @@
+// ПРОВЕРКА НА РАБОТУ JS
+
+const page = document.querySelector('.page');
+
+page.classList.remove('page--nojs');
+
 // НАВИГАЦИЯ
 
-const pageHeader = document.querySelector('.page-header');
 const navLists = document.querySelector('.main-navigation__lists');
 const navToggle = document.querySelector('.main-navigation__toggle');
-
-pageHeader.classList.remove('page-header--nojs');
 
 navToggle.addEventListener('click', function () {
   if (navLists.classList.contains('main-navigation__lists--closed')) {

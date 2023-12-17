@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html class="page page--nojs" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
@@ -12,10 +12,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="preload" href="./fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
@@ -43,7 +40,7 @@
           <li class="main-navigation__item">
             <a class="main-navigation__link main-navigation__link--form" href="form.html" aria-label="Перейти на страницу формы.">Вязание на заказ</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--additional">
             <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу c новыми поступлениями.">Новые поступления</a>
           </li>
           <li class="main-navigation__item main-navigation__item--additional">
@@ -184,7 +181,17 @@
         </div>
       </div>
     </div>
-    <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?ll=30.325086%2C59.938607&z=17.15" title="г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101"></iframe>
+    <div class="contacts__container">
+      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?ll=30.325086%2C59.938607&z=17.15" title="г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101"></iframe>
+      <picture class="contacts__image">
+        <source type="image/webp" media="(min-width: 1150px)" srcset="./img/map/map-desktop.webp 1x, ./img/map/map-desktop@2x.webp 2x" width="527" height="457">
+        <source type="image/webp" media="(min-width: 768px)" srcset="./img/map/map-tablet.webp 1x, ./img/map/map-tablet@2x.webp 2x" width="768" height="457">
+        <source type="image/webp" srcset="./img/map/map-mobile.webp 1x, ./img/map/map-mobile@2x.webp 2x" width="320" height="455">
+        <source media="(min-width: 1150px)" srcset="./img/map/map-desktop.jpg 1x, ./img/map/map-desktop@2x.jpg 2x" width="527" height="457">
+        <source media="(min-width: 768px)" srcset="./img/map/map-tablet.jpg 1x, ./img/map/map-tablet@2x.jpg 2x" width="768" height="457">
+        <img src="./img/map/map-mobile.jpg" srcset="./img/map/map-mobile@2x.jpg 2x" width="320" height="455" alt="г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+      </picture>
+    </div>
     <div class="contacts__wrapper">
       <a class="contacts__link button button--main" href="form.html" aria-label="Перейти на страницу формы.">НАпишите нам</a>
     </div>
@@ -235,15 +242,15 @@
       <fieldset class="modal__container">
         <legend class="modal__text">Выберите размер:</legend>
         <label class="field">
-          <input class="visually-hidden field__input--radio" type="radio" name="size" value="small" checked>
+          <input class="field__input visually-hidden field__input--radio" type="radio" name="size" value="small" checked>
           <span class="field__mark field__mark--modal">S</span>
         </label>
         <label class="field">
-          <input class="visually-hidden field__input--radio" type="radio" name="size" value="medium">
+          <input class="field__input visually-hidden field__input--radio" type="radio" name="size" value="medium">
           <span class="field__mark field__mark--modal">M</span>
         </label>
         <label class="field">
-          <input class="visually-hidden field__input--radio" type="radio" name="size" value="large">
+          <input class="field__input visually-hidden field__input--radio" type="radio" name="size" value="large">
           <span class="field__mark field__mark--modal">L</span>
         </label>
       </fieldset>

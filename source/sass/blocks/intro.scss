@@ -3,10 +3,23 @@
 .intro {
   position: relative;
 
+  @include tablet {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../img/intro/zigzag.svg");
+      background-size: auto 24px;
+      height: 24px;
+    }
+  }
+
   &--index {
     background-image: url("../img/intro/background-mobile.jpg");
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top -17px center;
     background-color: $color-additional-grey4;
 
     @media (min-resolution: 2dppx) {
@@ -15,6 +28,7 @@
 
     @include tablet {
       background-image: url("../img/intro/background-tablet.jpg");
+      background-position: top -45px center;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/intro/background-tablet@2x.jpg");
@@ -27,6 +41,12 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/intro/background-desktop@2x.jpg");
+      }
+
+      &::after {
+        height: 35px;
+        background-size: auto 35px;
+        background-image: url("../img/intro/zigzag-desktop.svg");
       }
     }
   }
@@ -41,26 +61,12 @@
 
     @include desktop {
       padding: 57px 50px 113px;
-    }
-  }
 
-  @include tablet {
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-image: url("../img/intro/zigzag.svg");
-      background-size: auto 24px;
-      height: 24px;
-    }
-  }
-
-  @include desktop {
-    &::after {
-      height: 34px;
-      background-size: auto 34px;
+      &::after {
+        height: 34px;
+        background-size: auto 34px;
+        background-image: url("../img/intro/zigzag-desktop-extra.svg");
+      }
     }
   }
 }

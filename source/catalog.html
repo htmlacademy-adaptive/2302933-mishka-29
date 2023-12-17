@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
@@ -12,10 +12,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="preload" href="./fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
@@ -43,10 +40,10 @@
           <li class="main-navigation__item">
             <a class="main-navigation__link main-navigation__link--form" href="form.html" aria-label="Перейти на страницу формы.">Вязание на заказ</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--additional">
             <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу c новыми поступлениями.">Новые поступления</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--additional">
             <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу распродажи.">Распродажа</a>
           </li>
         </ul>
@@ -153,7 +150,7 @@
     </a>
     <div class="video__bottom">
       <p class="video__description">По&nbsp;просьбам&nbsp;наших&nbsp;любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <button class="video__button button button--main" type="button">СДелать заказ</button>
+      <button class="video__button button button--main" type="button">Сделать заказ</button>
     </div>
   </section>
 </main>
@@ -202,15 +199,15 @@
       <fieldset class="modal__container">
         <legend class="modal__text">Выберите размер:</legend>
         <label class="field">
-          <input class="visually-hidden field__input--radio" type="radio" name="size" value="small" checked>
+          <input class="field__input visually-hidden field__input--radio" type="radio" name="size" value="small" checked>
           <span class="field__mark field__mark--modal">S</span>
         </label>
         <label class="field">
-          <input class="visually-hidden field__input--radio" type="radio" name="size" value="medium">
+          <input class="field__input visually-hidden field__input--radio" type="radio" name="size" value="medium">
           <span class="field__mark field__mark--modal">M</span>
         </label>
         <label class="field">
-          <input class="visually-hidden field__input--radio" type="radio" name="size" value="large">
+          <input class="field__input visually-hidden field__input--radio" type="radio" name="size" value="large">
           <span class="field__mark field__mark--modal">L</span>
         </label>
       </fieldset>

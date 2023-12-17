@@ -18,7 +18,7 @@
     &--opened {
       background-color: $color-white;
       position: absolute;
-      top: 79px;
+      top: 77px;
       right: 0;
       left: 0;
       z-index: 10;
@@ -143,7 +143,15 @@
   }
 
   &--additional {
-    padding-left: 27px;
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+
+    &:nth-child(2n) {
+      padding-left: 27px;
+    }
   }
 }
 
@@ -163,12 +171,7 @@
   }
 
   &--additional {
-    display: none;
-
-    @include desktop {
-      display: block;
-      font-size: 15px;
-    }
+    font-size: 15px;
   }
 
   &--catalog {
