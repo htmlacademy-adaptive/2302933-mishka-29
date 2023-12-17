@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
@@ -12,10 +12,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="preload" href="./fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
@@ -43,10 +40,10 @@
           <li class="main-navigation__item">
             <a class="main-navigation__link main-navigation__link--form" href="form.html" aria-label="Обновить страницу.">Вязание на заказ</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--additional">
             <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу c новыми поступлениями.">Новые поступления</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--additional">
             <a class="main-navigation__link main-navigation__link--additional" href="#" aria-label="Перейти на страницу распродажи.">Распродажа</a>
           </li>
         </ul>
@@ -77,48 +74,48 @@
     <p class="form-container__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
     <form class="form-container__form form" method="post" action="https://echo.htmlacademy.ru/">
       <fieldset class="form__group form__group--radio page-wrapper">
-        <legend class="form__group-title form__group-title--main">ТИП</legend>
+        <legend class="form__group-title form__group-title--main">Тип</legend>
         <label class="form__field field field--radio">
-          <input class="field__input--radio visually-hidden" type="radio" name="type" value="interior accessory" checked>
+          <input class="field__input field__input--radio visually-hidden" type="radio" name="type" value="interior accessory" checked>
           <span class="field__mark field__mark--main field__mark--radio"></span>
           <span class="field__description">Аксессуар для интерьера</span>
         </label>
         <label class="form__field field field--radio">
-          <input class="field__input--radio visually-hidden" type="radio" name="type" value="toy">
+          <input class="field__input field__input--radio visually-hidden" type="radio" name="type" value="toy">
           <span class="field__mark field__mark--main field__mark--radio"></span>
           <span class="field__description">Детская игрушка</span>
         </label>
       </fieldset>
       <div class="form__background-container">
         <fieldset class="form__group form__group--checkbox page-wrapper">
-          <legend class="form__group-title form__group-title--main">ЦВет</legend>
+          <legend class="form__group-title form__group-title--main">Цвет</legend>
             <label class="form__field field field--checkbox">
-              <input class="field__input--checkbox visually-hidden" type="checkbox" name="color" value="white" checked>
+              <input class="field__input field__input--checkbox visually-hidden" type="checkbox" name="color" value="white" checked>
               <span class="field__mark field__mark--main field__mark--checkbox"></span>
               <span class="field__description">Белый</span>
             </label>
             <label class="form__field field field--checkbox">
-              <input class="field__input--checkbox visually-hidden" type="checkbox" name="color" value="grey" checked>
+              <input class="field__input field__input--checkbox visually-hidden" type="checkbox" name="color" value="grey" checked>
               <span class="field__mark field__mark--main field__mark--checkbox"></span>
               <span class="field__description">Серый</span>
             </label>
             <label class="form__field field field--checkbox">
-              <input class="field__input--checkbox visually-hidden" type="checkbox" name="color" value="tiffany">
+              <input class="field__input field__input--checkbox visually-hidden" type="checkbox" name="color" value="tiffany">
               <span class="field__mark field__mark--main field__mark--checkbox"></span>
               <span class="field__description">Тиффани</span>
             </label>
             <label class="form__field field field--checkbox">
-              <input class="field__input--checkbox visually-hidden" type="checkbox" name="color" value="black">
+              <input class="field__input field__input--checkbox visually-hidden" type="checkbox" name="color" value="black">
               <span class="field__mark field__mark--main field__mark--checkbox"></span>
               <span class="field__description">Черный</span>
             </label>
             <label class="form__field field field--checkbox">
-              <input class="field__input--checkbox visually-hidden" type="checkbox" name="color" value="pink">
+              <input class="field__input field__input--checkbox visually-hidden" type="checkbox" name="color" value="pink">
               <span class="field__mark field__mark--main field__mark--checkbox"></span>
               <span class="field__description">Розовый</span>
             </label>
             <label class="form__field field field--checkbox">
-              <input class="field__input--checkbox visually-hidden" type="checkbox" name="color" value="orange">
+              <input class="field__input field__input--checkbox visually-hidden" type="checkbox" name="color" value="orange">
               <span class="field__mark field__mark--main field__mark--checkbox"></span>
               <span class="field__description">Оранжевый</span>
             </label>
@@ -128,15 +125,15 @@
         <legend class="form__group-title form__group-title--main">ФИО</legend>
         <label class="form__field field field--main">
           <span class="field__description field__description--input">Имя:</span>
-          <input class="field__input" type="text" name="user-name" placeholder="Введите ваше имя*" required>
+          <input class="field__input" type="text" name="user-name" placeholder="Введите ваше имя*" aria-label="Введите ваше имя." required>
         </label>
         <label class="form__field field field--main">
           <span class="field__description field__description--input">Фамилия:</span>
-          <input class="field__input" type="text" name="user-surname" placeholder="Укажите фамилию*" required>
+          <input class="field__input" type="text" name="user-surname" placeholder="Укажите фамилию*" aria-label="Введите вашу фамилию." required>
         </label>
         <label class="form__field field field--main">
           <span class="field__description field__description--input">Отчество:</span>
-          <input class="field__input" type="text" name="user-patronymic" placeholder="Отчество, если желаете">
+          <input class="field__input" type="text" name="user-patronymic" placeholder="Отчество, если желаете" aria-label="Введите ваше отчество.">
         </label>
       </fieldset>
       <div class="form__background-container">
@@ -144,14 +141,14 @@
           <legend class="visually-hidden">Контакты пользователя.</legend>
           <label class="form__group-title form__group-title--phone" for="user-phone">тел</label>
           <div class="form__field field field--extra">
-            <input class="field__input" type="text" name="user-phone" id="user-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            <input class="field__input" type="text" name="user-phone" id="user-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" aria-label="Введите ваш номер телефона." required>
             <svg class="field__icon field__icon--phone" width="25" height="24" aria-hidden="true" focusable="false">
               <use href="./img/sprite.svg#icon-phone"></use>
             </svg>
           </div>
           <label class="form__group-title form__group-title--email" for="user-email">E-mail</label>
           <div class="form__field field field--extra">
-            <input class="field__input" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" required>
+            <input class="field__input" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" aria-label="Введите ваш email." required>
             <svg class="field__icon field__icon--mail" width="32" height="21" aria-hidden="true" focusable="false">
               <use href="./img/sprite.svg#icon-mail"></use>
             </svg>
@@ -161,7 +158,7 @@
       <fieldset class="form__group form__group--textarea page-wrapper">
         <legend class="form__group-title form__group-title--main">Доп</legend>
         <label class="form__field field">
-          <textarea class="field__input field__input--textarea" name="user-wish" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="field__input field__input--textarea" name="user-wish" placeholder="Опишите все ваши пожелания к заказу" aria-label="Опишите все ваши пожелания к заказу."></textarea>
         </label>
       </fieldset>
       <div class="form__container page-wrapper">

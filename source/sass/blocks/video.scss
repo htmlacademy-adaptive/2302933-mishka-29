@@ -114,6 +114,15 @@
   @include tablet {
     gap: 40px;
     padding: 15px 41px 45px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 10px 10px 0 rgba($color-black, 0.1);
+    }
+
+    &:hover .video__top {
+      box-shadow: 0 10px 10px 0 rgba($color-black, 0.1);
+    }
   }
 
   @include desktop {

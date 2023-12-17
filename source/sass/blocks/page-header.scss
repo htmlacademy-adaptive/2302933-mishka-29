@@ -1,51 +1,31 @@
 //ШАПКА САЙТА
 
 .page-header {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: rgba($color-black, 0.1);
+
+    @include tablet {
+      top: 88px;
+    }
+  }
+
   &--main {
     @include tablet {
-      background: linear-gradient($color-white 0 66%, $color-additional-grey4 66% 100%);
+      background: linear-gradient($color-white 0 87px, $color-additional-grey4 87px 100%);
     }
   }
 
   &--extra {
     @include tablet {
-      background: linear-gradient($color-white 0 66%, $color-grey 66% 100%);
-    }
-  }
-
-  @include mobile {
-    &--nojs {
-      .main-navigation__toggle {
-        display: none;
-      }
-
-      .main-navigation {
-        margin: 0;
-        flex-grow: 1;
-      }
-
-      .main-navigation__lists {
-        display: block;
-      }
-
-      .page-header__wrapper {
-        padding: 80px 0 19px;
-      }
-    }
-  }
-
-  @include tablet {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 66%;
-      transform: translateY(-66%);
-      left: 0;
-      right: 0;
-      height: 1px;
-      background-color: rgba($color-black, 0.1);
+      background: linear-gradient($color-white 0 87px, $color-grey 87px 100%);
     }
   }
 }

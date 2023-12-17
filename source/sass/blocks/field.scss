@@ -21,7 +21,6 @@
 
   &--checkbox {
     gap: 23px;
-    align-items: center;
 
     @include tablet {
       gap: 30px;
@@ -142,6 +141,7 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
+  align-self: center;
 
   @include tablet {
     font-size: 19px;
