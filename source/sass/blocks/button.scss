@@ -10,9 +10,8 @@
   &--main {
     display: block;
     padding: 14px 0;
-    color: $color-text;
-    font-size: 17px;
     line-height: 20px;
+    color: $color-text;
     border: 2px solid $color-text;
     background-color: transparent;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -31,6 +30,18 @@
       outline: 2px solid $color-main;
       outline-offset: 8px;
     }
+  }
+
+  &--index {
+    font-size: 18px;
+
+    @include tablet {
+      font-size: 17px;
+    }
+  }
+
+  &--form {
+    font-size: 17px;
   }
 
   &--extra {

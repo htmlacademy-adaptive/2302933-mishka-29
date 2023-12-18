@@ -1,4 +1,4 @@
-
+//ПОЛЯ ВВОДА
 
 .field {
   display: flex;
@@ -148,7 +148,10 @@
   }
 
   &--input {
+    align-self: flex-start;
+
     @include tablet {
+      align-self: center;
       max-width: 150px;
     }
   }

@@ -116,6 +116,7 @@
 
 .contacts__container {
   @include desktop {
+    display: flex;
     grid-row: 1/3;
   }
 }
