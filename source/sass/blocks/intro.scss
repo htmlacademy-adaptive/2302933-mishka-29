@@ -21,6 +21,7 @@
     background-repeat: no-repeat;
     background-position: top -17px center;
     background-color: $color-additional-grey4;
+    background-size: 320px 373px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro/background-mobile@2x.jpg");
@@ -29,6 +30,7 @@
     @include tablet {
       background-image: url("../img/intro/background-tablet.jpg");
       background-position: top -45px center;
+      background-size: 768px 746px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/intro/background-tablet@2x.jpg");
@@ -38,16 +40,19 @@
     @include desktop {
       background-image: url("../img/intro/background-desktop.jpg");
       background-position: top -39px center;
+      background-size: 1150px 746px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/intro/background-desktop@2x.jpg");
       }
 
+      /* stylelint-disable max-nesting-depth */
       &::after {
         height: 35px;
         background-size: auto 35px;
         background-image: url("../img/intro/zigzag-desktop.svg");
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
@@ -62,11 +67,13 @@
     @include desktop {
       padding: 57px 50px 113px;
 
+      /* stylelint-disable max-nesting-depth */
       &::after {
         height: 34px;
         background-size: auto 34px;
         background-image: url("../img/intro/zigzag-desktop-extra.svg");
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 }
@@ -151,10 +158,12 @@
       height: 62px;
       mask: url("../img/icons/lamp.svg");
 
+      /* stylelint-disable max-nesting-depth */
       @include tablet {
         top: 30px;
         right: 36px;
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
@@ -168,10 +177,12 @@
       height: 60px;
       mask: url("../img/icons/toy.svg");
 
+      /* stylelint-disable max-nesting-depth */
       @include tablet {
         top: 31px;
         right: 33px;
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
